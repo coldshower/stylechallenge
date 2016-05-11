@@ -22,7 +22,7 @@
 		    <span class="hotel-stars glyphicon glyphicon-star{% if hotel.num_stars < 4 %}-empty{% endif %}"></span>
 		    <span class="hotel-stars glyphicon glyphicon-star{% if hotel.num_stars < 5 %}-empty{% endif %}"></span>
 			<span class="hotel-amenities">{{ hotel.amenities }}</span>
-			<button class="btn btn-default btn-xs btn-hidden" type="submit" id="btn-hotel-{{hotel.id}}">Add to itinerary</button>
+			<button class="add-hotel btn btn-default btn-xs btn-hidden" type="submit" id="btn-hotel-{{hotel.id}}">Add to itinerary</button>
 		</div>
 		<hr class="venue-divider">
 		{% endfor %}
@@ -35,7 +35,7 @@
 				{% if restaurant.price >= 1 %}${% endif %}{% if restaurant.price >= 2 %}${% endif %}{% if restaurant.price >= 3 %}${% endif %}{% if restaurant.price >= 4 %}${% endif %}{% if restaurant.price >= 5 %}${% endif %}
 			</span>
 			<span class="restaurant-cuisine">{{ restaurant.cuisine }}</span>
-			<button class="btn btn-default btn-xs btn-hidden" type="submit" id="btn-rest-{{restaurant.id}}">Add to itinerary</button>
+			<button class="add-rest btn btn-default btn-xs btn-hidden" type="submit" id="btn-rest-{{restaurant.id}}">Add to itinerary</button>
 		</div>
 			<hr class="venue-divider">
 		{% endfor %}
@@ -44,7 +44,7 @@
 		{% for activity in templateActivities %}
 		<div class="wrapper">
 			<h5 class="venue-name"><a href="#" onClick="toggleButton('btn-activity-{{activity.id}}')">{{activity.name}}</a></h5>
-			<button class="btn btn-default btn-xs btn-hidden" type="submit" id="btn-activity-{{activity.id}}">Add to itinerary</button>
+			<button class="add-act btn btn-default btn-xs btn-hidden" type="submit" id="btn-activity-{{activity.id}}">Add to itinerary</button>
 		</div>
 			<hr class="venue-divider">
 		{% endfor %}
@@ -65,18 +65,16 @@
 
 		<div class="day-content">
 			<h4>Hotel</h4>
-			<span>Lorem Hotel</span>
-			<h4>Restaurant</h4>
-			<ul>
-				<li>Place to eat</li>
-				<li>Place to eat</li>
-				<li>Place to eat</li>
+			<span class="lorem-hotel"></span>
+			<h4>Restaurants</h4>
+			<ul class="lorem-rest">
+				
 			</ul>
 			<h4>Activities</h4>
-			<ul>
+			<ul class="lorem-act">
+				<!-- <li>Thing to do</li>
 				<li>Thing to do</li>
-				<li>Thing to do</li>
-				<li>Thing to do</li>
+				<li>Thing to do</li> -->
 			</ul>
 		</div>
 	</div>

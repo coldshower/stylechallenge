@@ -50,9 +50,8 @@ div.venues-section h3 {
   font-size: 11px; }
 
 hr.venue-divider {
-  height: 2px;
-  border-color: #eee;
-  opacity: 1.0;
+  border: 1px solid #ABABAB;
+  opacity: 0.1;
   margin: 12px 0; }
 
 button.btn-hidden {
