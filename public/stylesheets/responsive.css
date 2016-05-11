@@ -1,0 +1,32 @@
+@media only screen and (min-width: 601px) and (max-width: 900px) {
+  div.map-section {
+    height: 60vh; }
+  div.venues-section div.venue-box {
+    width: 50vw;
+    height: 30vh;
+    top: 66vh; }
+  div.days-box {
+    width: 50vw;
+    height: 30vh;
+    top: 66vh;
+    left: 50vw; }
+  footer {
+    display: none; } }
+
+@media only screen and (max-width: 600px) {
+  .navbar-brand {
+    padding-left: 5px; }
+  .nav > li > a {
+    padding: 8px 5px; }
+  div.map-section {
+    height: 60vh; }
+  div.venues-section div.venue-box {
+    width: 100vw;
+    height: 40vh;
+    top: 66vh; }
+  div.days-section div.days-box {
+    width: 100vw;
+    height: 30vh;
+    top: 105vh; }
+  footer {
+    display: none; } }

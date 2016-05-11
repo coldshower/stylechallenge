@@ -10,6 +10,13 @@ nav {
 	margin-bottom: 0;
 }
 
+.nav>li {
+	display: inline-block;
+}
+.nav>li>a {
+	display: inline-block;
+}
+
 button {
 	outline: 0;
 }
@@ -104,7 +111,7 @@ div.days-section {
 
 	div#day-toggle {
 		float: right;
-		margin-right: 25px;
+		margin-right: 5%;
 		.btn-circle {
 			margin-left: 3px;
 			margin-right: 3px;
@@ -120,5 +127,7 @@ footer {
 	left: 18vw;
 	bottom: 0;
 }
+
+@import "responsive"
 
 
