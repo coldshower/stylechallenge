@@ -1,0 +1,83 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<div class="map-section">
+	<div id="map-canvas">
+	</div>
+</div>
+
+<!-- VENUES -->
+<div class="venues-section">
+	<div class="box venue-box">
+
+		<div class="venue-title"><h3 class="wrapper">Hotels</h3></div>
+		{% for hotel in templateHotels %}
+		<div class="wrapper">
+			<h5 class="venue-name"><a href="#" onClick="toggleButton('btn-hotel-{{hotel.id}}')">{{hotel.name}}</a></h5>
+		  	<span class="hotel-stars glyphicon glyphicon-star{% if hotel.num_stars < 1 %}-empty{% endif %}"></span>
+		    <span class="hotel-stars glyphicon glyphicon-star{% if hotel.num_stars < 2 %}-empty{% endif %}"></span>
+		    <span class="hotel-stars glyphicon glyphicon-star{% if hotel.num_stars < 3 %}-empty{% endif %}"></span>
+		    <span class="hotel-stars glyphicon glyphicon-star{% if hotel.num_stars < 4 %}-empty{% endif %}"></span>
+		    <span class="hotel-stars glyphicon glyphicon-star{% if hotel.num_stars < 5 %}-empty{% endif %}"></span>
+			<span class="hotel-amenities">{{ hotel.amenities }}</span>
+			<button class="btn btn-default btn-xs btn-hidden" type="submit" id="btn-hotel-{{hotel.id}}">Add to itinerary</button>
+		</div>
+		<hr class="venue-divider">
+		{% endfor %}
+
+		<div class="venue-title"><h3 class="wrapper">Restaurants</h3></div>
+		{% for restaurant in templateRestaurants %}
+		<div class="wrapper">
+			<h5 class="venue-name"><a href="#" onClick="toggleButton('btn-rest-{{restaurant.id}}')">{{restaurant.name}}</a></h5>
+			<span class="restaurant-dollar">
+				{% if restaurant.price >= 1 %}${% endif %}{% if restaurant.price >= 2 %}${% endif %}{% if restaurant.price >= 3 %}${% endif %}{% if restaurant.price >= 4 %}${% endif %}{% if restaurant.price >= 5 %}${% endif %}
+			</span>
+			<span class="restaurant-cuisine">{{ restaurant.cuisine }}</span>
+			<button class="btn btn-default btn-xs btn-hidden" type="submit" id="btn-rest-{{restaurant.id}}">Add to itinerary</button>
+		</div>
+			<hr class="venue-divider">
+		{% endfor %}
+
+		<div class="venue-title"><h3 class="wrapper">Activities</h3></div>
+		{% for activity in templateActivities %}
+		<div class="wrapper">
+			<h5 class="venue-name"><a href="#" onClick="toggleButton('btn-activity-{{activity.id}}')">{{activity.name}}</a></h5>
+			<button class="btn btn-default btn-xs btn-hidden" type="submit" id="btn-activity-{{activity.id}}">Add to itinerary</button>
+		</div>
+			<hr class="venue-divider">
+		{% endfor %}
+
+	</div>
+</div>
+
+
+<!-- DAYS -->
+<div class="days-section">
+	<div class="box days-box wrapper">
+		<h3>Days</h3>
+		<div id="day-toggle">
+			<button type="button" class="btn btn-default btn-circle">1</button>
+			<button type="button" class="btn btn-default btn-circle">2</button>
+			<button type="button" class="btn btn-default btn-circle">3</button>
+		</div>
+
+		<div class="day-content">
+			<h4>Hotel</h4>
+			<span>Lorem Hotel</span>
+			<h4>Restaurant</h4>
+			<ul>
+				<li>Place to eat</li>
+				<li>Place to eat</li>
+				<li>Place to eat</li>
+			</ul>
+			<h4>Activities</h4>
+			<ul>
+				<li>Thing to do</li>
+				<li>Thing to do</li>
+				<li>Thing to do</li>
+			</ul>
+		</div>
+	</div>
+</div>
+	
+{% endblock %}

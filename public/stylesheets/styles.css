@@ -1,0 +1,91 @@
+body {
+  padding-top: 6vh;
+  width: 100%;
+  height: 100vh; }
+
+nav {
+  height: 6vh;
+  margin-bottom: 0; }
+
+button {
+  outline: 0; }
+
+div.box {
+  width: 18vw;
+  opacity: 0.7;
+  position: absolute; }
+
+.wrapper {
+  padding-left: 3px; }
+
+div.map-section {
+  width: 100%;
+  height: 94vh; }
+  div.map-section div#map-canvas {
+    width: 100%;
+    height: 100%; }
+
+div.venues-section div.venue-box {
+  height: 60vh;
+  background: white;
+  top: 6vh;
+  overflow: auto; }
+
+div.venues-section div.venue-title {
+  background-color: rgba(0, 0, 0, 0.2); }
+
+div.venues-section h3 {
+  margin-top: 0; }
+
+.hotel-stars {
+  font-size: 11px; }
+
+.hotel-amenities {
+  font-size: 11px; }
+
+hr.venue-divider {
+  height: 2px;
+  border-color: #eee;
+  opacity: 1.0;
+  margin: 12px 0; }
+
+button.btn-hidden {
+  display: none; }
+
+@font-face {
+  font-family: 'Glyphicons Halflings';
+  src: url("/fonts/glyphicons-halflings-regular.eot"); }
+
+div.days-section h3 {
+  margin-top: 10px;
+  width: 30%;
+  display: inline; }
+
+div.days-section ul {
+  padding: 0;
+  margin: 0; }
+
+div.days-section li {
+  list-style: none; }
+
+div.days-section div.days-box {
+  border-top: 1px solid #ABABAB;
+  height: 34vh;
+  background: white;
+  top: 66vh;
+  padding-top: 10px;
+  overflow: auto; }
+
+div.days-section div#day-toggle {
+  float: right;
+  margin-right: 25px; }
+  div.days-section div#day-toggle .btn-circle {
+    margin-left: 3px;
+    margin-right: 3px;
+    border-radius: 50%;
+    outline: 0; }
+
+footer {
+  position: absolute;
+  left: 18vw;
+  bottom: 0; }
